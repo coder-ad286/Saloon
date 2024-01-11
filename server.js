@@ -7,7 +7,6 @@ import cookieParser from 'cookie-parser';
 import morgan from 'morgan';
 import { fileURLToPath } from 'url';
 import path, { dirname } from 'path';
-import adminRoute from './routes/adminRoute.js';
 import branchRoute from './routes/branchRoute.js';
 import entriesRoute from './routes/entriesRoute.js';
 import expenseRoute from './routes/expenseRoute.js';
@@ -32,7 +31,6 @@ app.use(cors({credentials: true, origin: true}))
 connectDatabase();
 
 //CONTROLLERS
-app.use('/api/v1/admin',adminRoute)
 app.use('/api/v1/branch',branchRoute)
 app.use('/api/v1/entries',entriesRoute)
 app.use('/api/v1/expense',expenseRoute)
